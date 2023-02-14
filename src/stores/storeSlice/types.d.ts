@@ -1,0 +1,3 @@
+interface StoreState {
+  value: number
+}

@@ -1,0 +1,138 @@
+@import "../../styles/scss";
+
+.products {
+  border-radius: 3px;
+  padding: 30px;
+  background-color: var(--gray);
+  border: 1px solid var(--gray-border);
+
+  & > .titleAndInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & > span {
+      font-size: 18px;
+      color: var(--dark);
+    }
+    & > .inputAndSelect {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      & > input[type="text"] {
+        border: 1px solid var(--gray);
+        border-radius: 3px;
+        background-color: var(--light);
+        color: var(--dark);
+        flex: 1;
+        font-size: 16px;
+        padding: 8px 6px;
+        border: 1px solid var(--gray-border);
+      }
+      & > .selector {
+        position: relative;
+
+        & > button {
+          border: 1px solid var(--gray-two);
+          background-color: var(--light);
+          border-radius: 3px;
+          padding: 8px 6px;
+          height: 100%;
+          font-size: 16px;
+          cursor: pointer;
+          width: 180px;
+          border: 1px solid var(--gray-border);
+        }
+        & > ul {
+          position: absolute;
+          border: 1px solid var(--gray-border);
+          border-top: none;
+          background-color: var(--light);
+          width: 100%;
+          padding: 10px;
+          border-radius: 0 0 3px 3px;
+          z-index: 2;
+
+          & > li {
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 2px;
+            &:hover {
+              background-color: var(--gray-border);
+            }
+          }
+        }
+      }
+    }
+  }
+  & > .cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (width < 1400px) {
+  .products {
+    & > .cards {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+  }
+}
+@media (width < 1170px) {
+  .products {
+    & > .cards {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+}
+@media (width < 950px) {
+  .products {
+    & > .cards {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+}
+@media (width < 740px) {
+  .products {
+    & > .cards {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+@media (width < 550px) {
+  .products {
+    & > .cards {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+    .inputAndSelect {
+      flex-direction: column;
+      input[type="text"] {
+        width: 100%;
+      }
+      .selector {
+        width: 100%;
+
+        & > button {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

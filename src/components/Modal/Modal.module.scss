@@ -1,0 +1,80 @@
+@import "../../styles/scss";
+
+.modal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  display: flex;
+  padding: 20px;
+  z-index: 22;
+  transition: 0.15s;
+
+  // disable modal
+  opacity: 0;
+  pointer-events: none;
+
+  & > .modalInner {
+    margin: auto;
+    border-radius: 3px;
+    padding: 20px;
+    background-color: var(--light-two);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & > .closeBtn {
+      @include center;
+      margin-left: auto;
+      font-size: 24px;
+      padding: 0px;
+      border: none;
+      color: var(--dark);
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    & > span {
+      text-align: center;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    & > .buttons {
+      display: flex;
+      gap: 10px;
+      margin-left: auto;
+
+      & > button {
+        font-size: 14px;
+        cursor: pointer;
+        background-color: var(--main-blue);
+        padding: 0 14px;
+        border-radius: 3px;
+        color: var(--only-light);
+        white-space: nowrap;
+        padding: 8px 20px;
+        border: none;
+        transition: 0.15s;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 600px) {
+  .modal {
+    & > .modalInner {
+      & > .buttons {
+        flex-direction: column;
+        width: 100%;
+
+        & > button {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../styles/scss";
+
+.favorites {
+  display: flex;
+  flex: 1;
+  padding: 40px 20px;
+
+  & > .container {
+    width: 100%;
+    max-width: calc($two-xl - 40px);
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: var(--gray);
+    border: 1px solid var(--gray-border);
+
+    & > span {
+      font-size: 18px;
+      color: var(--dark);
+    }
+    .cards {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+    & > .emptyFav {
+      margin: auto;
+      color: var(--dark);
+    }
+  }
+}
+
+@media (width < 1350px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(5, 1fr) !important;
+    }
+  }
+}
+@media (width < 1170px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+  }
+}
+@media (width < 950px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+}
+@media (width < 740px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+@media (width < 550px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+}

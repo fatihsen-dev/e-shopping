@@ -1,9 +1,11 @@
+import siteSlice from "./siteSlice/siteSlice"
 import { configureStore } from "@reduxjs/toolkit"
-import storeSlice from "./storeSlice/storeSlice"
+import shopSlice from "./storeSlice/shopSlice"
 
 export const store = configureStore({
   reducer: {
-    store: storeSlice,
+    shop: shopSlice,
+    site: siteSlice,
   },
 })
 

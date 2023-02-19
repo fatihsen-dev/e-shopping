@@ -1,0 +1,21 @@
+:root {
+  --main-blue: #4949e7;
+  --main-pink: #ff03f5;
+  --main-red: #ff0303;
+
+  --dark: #111111;
+  --light: #ffffff;
+  --light-two: #ffffff;
+
+  --only-light: #ffffff;
+  --gray: #f5f5f5;
+  --gray-border: #dddddd;
+}
+
+body.dark {
+  --dark: #ffffff;
+  --light: #111111;
+  --light-two: #171717;
+  --gray: #121212;
+  --gray-border: #0e0e0e;
+}

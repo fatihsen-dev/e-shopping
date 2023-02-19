@@ -1,0 +1,159 @@
+@import "../../styles/scss";
+
+.cart {
+  display: flex;
+  flex: 1;
+  padding: 40px 20px;
+
+  & > .container {
+    width: 100%;
+    max-width: calc($two-xl - 40px);
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    overflow: auto;
+    background-color: var(--gray);
+    border: 1px solid var(--gray-border);
+    gap: 20px;
+
+    .cards {
+      max-height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-content: flex-start;
+      gap: 20px;
+      flex: 1;
+    }
+    .price {
+      flex: 0.5;
+      border-radius: 5px;
+      color: var(--dark);
+      background-color: var(--light);
+      margin-bottom: auto;
+
+      & > .priceInner {
+        padding: 20px;
+        margin-bottom: auto;
+
+        & > .priceInnerTotalAndProduct {
+          display: flex;
+          flex-direction: column;
+
+          & > .totalInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gray-border);
+            font-size: 18px;
+            font-weight: 500;
+          }
+          & > .productsInfos {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+
+            & > div {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 6px 0;
+              font-weight: 300;
+              gap: 20px;
+
+              & > div {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+
+                & > span:first-of-type {
+                  display: inline-block;
+                  opacity: 0.6;
+                  margin-right: 10px;
+                  width: 40px;
+                }
+              }
+            }
+          }
+        }
+        & > .buttonAndInput {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 50px;
+
+          & > button {
+            cursor: pointer;
+            background-color: var(--main-blue);
+            padding: 0 14px;
+            border-radius: 3px;
+            color: var(--only-light);
+            white-space: nowrap;
+            padding: 10px 0;
+            border: none;
+            transition: 0.15s;
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+          & > input[type="text"] {
+            font-size: 16px;
+            border-radius: 3px;
+            padding: 6px;
+            background-color: var(--light);
+            color: var(--dark);
+            border: 1px solid var(--gray-border);
+          }
+        }
+      }
+    }
+    & > .emptyCart {
+      width: 100%;
+      height: 100%;
+      color: var(--dark);
+      @include center;
+    }
+  }
+}
+
+@media (width < 1350px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+}
+@media (width < 1170px) {
+  .container {
+    flex-direction: column-reverse;
+    & > .cards {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+}
+@media (width < 950px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+@media (width < 740px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+@media (width < 550px) {
+  .container {
+    & > .cards {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+}

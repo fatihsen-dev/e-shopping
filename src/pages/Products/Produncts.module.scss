@@ -1,0 +1,18 @@
+@import "../../styles/scss";
+
+.products {
+  display: flex;
+  flex: 1;
+
+  & > .container {
+    width: 100%;
+    max-width: $two-xl;
+    margin: 0 auto;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: auto;
+  }
+}

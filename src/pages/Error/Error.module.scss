@@ -1,0 +1,23 @@
+@import "../../styles/scss";
+
+.error {
+  display: flex;
+  flex: 1;
+  height: 100%;
+
+  & > .container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    max-width: $two-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    & > p {
+      text-align: center;
+    }
+  }
+}

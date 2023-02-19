@@ -1,0 +1,102 @@
+@import "../../styles/scss";
+
+.banner {
+  background-color: var(--main-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 360px;
+  height: 360px;
+  margin-top: 20px;
+  border-radius: 3px;
+  position: relative;
+
+  & > .bannerText {
+    flex: 0.8;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 60px;
+    height: inherit;
+
+    & > div {
+      color: var(--only-light);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      & > h2 {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 500;
+      }
+      & > p {
+        opacity: 0.8;
+      }
+    }
+  }
+  & > .image {
+    @include center;
+    height: 100%;
+    padding: 30px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    flex: 1;
+    & > img {
+      height: 100%;
+      object-fit: contain;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (width < $lg) {
+  .banner {
+    & > .bannerText {
+      z-index: 1;
+    }
+    & > .image {
+      flex: 0.5;
+      padding-right: 50px;
+      inset: 0;
+      position: absolute;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (width < $md) {
+  .banner {
+    justify-content: center;
+    height: 240px;
+    & > .bannerText {
+      z-index: 1;
+      padding: 0px;
+      width: 100%;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > h2 {
+          font-size: 40px;
+          line-height: 40px;
+          font-weight: 500;
+        }
+        & > p {
+          opacity: 0.8;
+        }
+      }
+    }
+    & > .image {
+      padding-right: 0px;
+      inset: 0;
+      position: absolute;
+      & > img {
+        margin-left: auto;
+        width: 100%;
+        opacity: 0.6;
+      }
+    }
+  }
+}

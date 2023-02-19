@@ -1,0 +1,172 @@
+@import "../../styles/scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+  padding: 15px;
+  border-radius: 5px;
+  gap: 10px;
+  color: var(--dark);
+
+  & > .img {
+    width: 100%;
+    height: 160px;
+    position: relative;
+
+    & > .rating {
+      position: absolute;
+      background-color: gold;
+      font-size: 14px;
+      top: 5px;
+      left: 5px;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+    & > .remove {
+      @include center;
+      position: absolute;
+      cursor: pointer;
+      top: 5px;
+      right: 5px;
+      padding: 4px;
+      background-color: rgba($color: #ff0303, $alpha: 0.3);
+      border: 1px solid var(--main-red);
+      color: var(--main-red);
+      border-radius: 3px;
+      font-size: 16px;
+      transition: 0.15s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+      object-fit: cover;
+    }
+  }
+  & > .titlePriceSubtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & > .titlePrice {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 16px;
+      font-weight: 500;
+
+      & > .title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-align: start;
+        font-weight: 600;
+      }
+    }
+    & > .subTitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: 13px;
+      color: var(--dark);
+      opacity: 0.8;
+      margin-right: 30px;
+      text-align: start;
+    }
+  }
+  & > .stockAndButtons {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > .stock {
+      font-size: 13px;
+      font-weight: 500;
+    }
+    & > .buyAndFavButtons {
+      display: flex;
+      gap: 5px;
+      & > button {
+        @include center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:nth-of-type(1) {
+          width: 30px;
+          height: 28px;
+          background-color: rgba($color: #ff03f5, $alpha: 0.2);
+          border: 1px solid var(--main-pink);
+          color: var(--main-pink);
+          border-radius: 5px;
+          font-size: 18px;
+          transition: 0.1s;
+          position: relative;
+
+          & > * {
+            position: absolute;
+            transition: 0.15s;
+          }
+          &:hover {
+            & > .fillHeart {
+              opacity: 1;
+            }
+            & > .lineHeart {
+              opacity: 0;
+            }
+          }
+          & > .fillHeart {
+            opacity: 0;
+          }
+        }
+        &:nth-of-type(2) {
+          background-color: var(--main-blue);
+          padding: 0 14px;
+          border-radius: 5px;
+          color: var(--only-light);
+          white-space: nowrap;
+          transition: 0.15s;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    & > .countButtons {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      & > .count {
+        @include center;
+        height: 26px;
+        border: 1px solid var(--gray-border);
+        padding: 0 20px;
+        border-radius: 5px;
+        font-variant-numeric: tabular-nums;
+      }
+      & > button {
+        @include center;
+        border-radius: 5px;
+        width: 26px;
+        height: 26px;
+        background-color: var(--main-blue);
+        color: var(--only-light);
+        border: none;
+        cursor: pointer;
+        transition: 0.15s;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

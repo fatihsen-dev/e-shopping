@@ -14,3 +14,9 @@
     color: var(--dark);
   }
 }
+
+@media (width < 600px) {
+  .bestSelling {
+    padding: 20px;
+  }
+}

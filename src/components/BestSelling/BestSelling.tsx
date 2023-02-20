@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next"
 import Card from "../Card/Card"
 import { useAppSelector } from "../../stores/hook"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { FreeMode, Pagination } from "swiper"
+import { FreeMode, Navigation, Pagination } from "swiper"
 
 import "swiper/css"
 import "swiper/css/free-mode"
-import "swiper/css/pagination"
+import "swiper/css/navigation"
 
 export default function BestSelling() {
   const [mostPopular, setMostPopular] = useState<Product[]>()
@@ -39,15 +39,16 @@ export default function BestSelling() {
             spaceBetween: 20,
           },
           1350: {
-            slidesPerView: 6,
+            slidesPerView: 5,
             spaceBetween: 20,
           },
           1600: {
-            slidesPerView: 6,
+            slidesPerView: 5,
             spaceBetween: 20,
           },
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[FreeMode, Pagination, Navigation]}
+        navigation={true}
         className={styles.cards}
       >
         {mostPopular &&

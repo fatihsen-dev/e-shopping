@@ -13,6 +13,7 @@ import { Menu } from "@headlessui/react"
 export default function Navbar() {
   const { t, i18n } = useTranslation()
   const { darkMode } = useAppSelector((state) => state.site)
+  const { cart } = useAppSelector((state) => state.shop)
   const dispatch = useAppDispatch()
 
   const langHandle = () => {
@@ -41,6 +42,7 @@ export default function Navbar() {
             <li>
               <NavLink to="/cart">
                 <CgShoppingCart />
+                {cart[0]?.title.length > 0 && cart.length !== 0 && <b>{cart.length}</b>}
                 <span>{t("cart")}</span>
               </NavLink>
             </li>

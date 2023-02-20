@@ -36,33 +36,34 @@ export default function App() {
     }
   }
 
-  if (status === true)
-    return (
-      <>
-        <div className={styles.app}>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Products />} />
-            <Route path="/favorites" element={<Favorites />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/account" element={<Account />} />
-          </Routes>
-        </div>
-        <Toaster position="top-right" reverseOrder={false} />
-      </>
-    )
-  if (status === false)
-    return (
-      <>
-        <Error />
-        <Toaster position="top-right" reverseOrder={false} />
-      </>
-    )
-  if (status === null)
-    return (
-      <>
-        <div />
-        <Toaster position="top-right" reverseOrder={false} />
-      </>
-    )
+  return (
+    <>
+      {status === true && (
+        <>
+          <div className={styles.app}>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Products />} />
+              <Route path="/favorites" element={<Favorites />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/account" element={<Account />} />
+            </Routes>
+          </div>
+          <Toaster position="top-right" reverseOrder={false} />
+        </>
+      )}
+      {status === false && (
+        <>
+          <Error />
+          <Toaster position="top-right" reverseOrder={false} />
+        </>
+      )}
+      {status === null && (
+        <>
+          <div />
+          <Toaster position="top-right" reverseOrder={false} />
+        </>
+      )}
+    </>
+  )
 }

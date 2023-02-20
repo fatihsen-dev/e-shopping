@@ -25,14 +25,10 @@ git clone link
 ```
 
 ```bash
-cd openai-social-media-app
+cd e-shopping-task
 ```
 
 ### Run
-
-```bash
-cd e-shopping-task
-```
 
 ```bash
 npm install

@@ -24,5 +24,10 @@
   "cartPageTotalPrice": "Toplam Fiyat:",
   "promotionCode": "Promosyon kodu",
   "removeFavItemMessage": "Ürün favoriden kaldırıldı",
-  "addFavItemMessage": "Ürün favorilere eklendi"
+  "addFavItemMessage": "Ürün favorilere eklendi",
+  "cartRemoveProductMessage": "Ürünü sepetten kaldırmak istediğinize emin misiniz?",
+  "cartRemoveProductBtn": "Ürünü sepetten çıkar",
+  "cartRemoveProductAndAddFavBtn": "Ürünü sepetten çıkarın ve favorilere ekleyin",
+  "addressTitle": "Adreslerim",
+  "addressAddBtn": "Ekle"
 }

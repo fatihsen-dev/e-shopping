@@ -36,10 +36,19 @@ body.dark {
   }
 }
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+}
+
 .product-card {
   background-color: var(--light-two) !important;
 }
 .active-cart-modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+.address-modal-active {
   opacity: 1;
   pointer-events: auto;
 }

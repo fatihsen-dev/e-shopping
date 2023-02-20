@@ -1,3 +1,28 @@
 {
-  "welcome": "Reacte hoş geldin"
+  "favorites": "Favorilerim",
+  "cart": "Sepetim",
+  "account": "Hesabım",
+  "bannerTitle": "Yeni sezon fırsatları başladı",
+  "bannerSubTittle": "Bu sezonda %60’a varan indirimler",
+  "bestselling": "En popüler ürünler",
+  "error": "Hata",
+  "errorTitle": "Bir şeyler yanlış gitti!",
+  "errorSubTitle": "Lütfen bir süre sonra sayfayı yenileyip tekrar deneyin.",
+  "home": "Ana Sayfa",
+  "cardBuyName": "Satın al",
+  "cardStock": "STOK",
+  "allProducts": "Tüm ürünler",
+  "productFilterPlaceholder": "Ürün ara",
+  "productsMenu": {
+    "recommended": "Önerilen",
+    "lowestPrice": "En düşük fiyat",
+    "highestPrice": "En yüksek fiyat",
+    "popular": "Popüler"
+  },
+  "emptyCart": "Sepetiniz boş görünüyor.",
+  "emptyFav": "Favorilerinizde ürün bulunmamaktadır.",
+  "cartPageTotalPrice": "Toplam Fiyat:",
+  "promotionCode": "Promosyon kodu",
+  "removeFavItemMessage": "Ürün favoriden kaldırıldı",
+  "addFavItemMessage": "Ürün favorilere eklendi"
 }

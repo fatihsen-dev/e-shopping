@@ -1,3 +1,28 @@
 {
-  "welcome": "Welcome to React"
+  "favorites": "Favorites",
+  "cart": "My Cart",
+  "account": "Account",
+  "bannerTitle": "New season sale has started",
+  "bannerSubTittle": "Up to 60% off this season",
+  "bestselling": "Most popular products",
+  "error": "Error",
+  "errorTitle": "Something went wrong!",
+  "errorSubTitle": "Please refresh the page after a while and try again.",
+  "home": "Home",
+  "cardBuyName": "Buy",
+  "cardStock": "STOCK",
+  "allProducts": "All products",
+  "productFilterPlaceholder": "Search product",
+  "productsMenu": {
+    "recommended": "Recommended",
+    "lowestPrice": "Lowest price",
+    "highestPrice": "Highest price",
+    "popular": "Popular"
+  },
+  "emptyCart": "Your cart appears empty.",
+  "emptyFav": "There are no products in your favourites.",
+  "cartPageTotalPrice": "Total price:",
+  "promotionCode": "Promotion Code",
+  "removeFavItemMessage": "Product removed from favorite",
+  "addFavItemMessage": "Product added to favorites"
 }

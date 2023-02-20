@@ -19,7 +19,6 @@
      - Ürünü sepetten kaldırmak istediğinize emin misiniz ?
        - Ürünü sepetten çıkar
        - Ürünü sepetten çıkar ve favorilere ekle
-     - Hayır
 
 ## OPSİTONEL SAYFA
   - önceden eklenen adresler listelenmeli
@@ -39,4 +38,3 @@
    - Sayfa ingilizce ve türkçe diller içermeli (ürün isimleri değişmicek)
    - Projeye eslint ve prettier entegrasyonu yapılması
    - kodu desteklicek yorum satırları
-   - eslit ve prettier entegrasyonu yapılmalı

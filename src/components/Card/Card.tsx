@@ -187,9 +187,9 @@ export default function Card({ count, id, className, rating, title, subTitle, im
         modalIsActive={modalIsActive}
         setModalIsActive={setModalIsActive}
         setRemoveOrFav={setRemoveOrFav}
-        text="Ürünü sepetten kaldırmak istediğinize emin misiniz ?"
-        buttonOne="Ürünü sepetten çıkar"
-        buttonTwo="Ürünü sepetten çıkar ve favorilere ekle"
+        text={t("cartRemoveProductMessage")}
+        buttonOne={t("cartRemoveProductBtn")}
+        buttonTwo={t("cartRemoveProductAndAddFavBtn")}
       />
     </>
   )

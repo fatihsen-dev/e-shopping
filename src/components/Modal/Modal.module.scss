@@ -63,8 +63,9 @@
   }
 }
 
-@media (width < 600px) {
+@media (width < 650px) {
   .modal {
+    padding: 5px;
     & > .modalInner {
       & > .buttons {
         flex-direction: column;
@@ -73,6 +74,7 @@
         & > button {
           width: 100%;
           box-sizing: border-box;
+          font-size: 14px;
         }
       }
     }

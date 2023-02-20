@@ -1,0 +1,54 @@
+@import "../../styles/scss";
+
+.account {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+
+  & > .container {
+    width: 100%;
+    max-width: calc($two-xl - 40px);
+    border-radius: 5px;
+    max-height: 800px;
+    padding: 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    color: var(--dark);
+    background-color: var(--gray);
+    border: 1px solid var(--gray-border);
+    gap: 20px;
+
+    & > .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > span {
+        font-weight: 500;
+      }
+      & > button {
+        font-size: 14px;
+        cursor: pointer;
+        background-color: var(--main-blue);
+        padding: 0 14px;
+        border-radius: 3px;
+        color: var(--only-light);
+        white-space: nowrap;
+        padding: 8px 50px;
+        border: none;
+        transition: 0.15s;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    .address {
+      background-color: var(--light);
+      border: 1px solid var(--gray-border);
+      padding: 20px;
+    }
+  }
+}

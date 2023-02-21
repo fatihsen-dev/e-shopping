@@ -41,12 +41,12 @@ export default function Card({ count, id, className, rating, title, subTitle, im
 
     if (favorites[0]?.title?.length === 0 && product) {
       dispatch(loadAllFavorites({ favorites: [product] }))
-      toast.success(t("addFavItemMessage"))
+      toast(t("addFavItemMessage"))
     } else if (!filtered && product) {
       dispatch(loadAllFavorites({ favorites: [...favorites, product] }))
-      toast.success(t("addFavItemMessage"))
+      toast(t("addFavItemMessage"))
     } else if (filtered) {
-      toast.success(t("removeFavItemMessage"))
+      toast(t("removeFavItemMessage"))
       setIsFav(false)
       dispatch(loadAllFavorites({ favorites: favorites.filter((p: Product) => p.id !== id) }))
     }
@@ -59,12 +59,16 @@ export default function Card({ count, id, className, rating, title, subTitle, im
 
     if (findByCart && cart[0]?.title.length > 0) {
       dispatch(loadAllCart({ cart: [...filtered, { ...findByCart, count: findByCart.count + 1 }] }))
+      toast(t("cartBuyProductNotification"))
     } else if (product && cart[0]?.title.length === 0) {
       dispatch(loadAllCart({ cart: [{ ...product, count: 1 }] }))
+      toast(t("cartBuyProductNotification"))
     } else if (product && cart[0]?.title.length > 0) {
       dispatch(loadAllCart({ cart: [...filtered, { ...product, count: 1 }] }))
+      toast(t("cartBuyProductNotification"))
     } else if (product && cart.length === 0) {
       dispatch(loadAllCart({ cart: [{ ...product, count: 1 }] }))
+      toast(t("cartBuyProductNotification"))
     }
   }
 

@@ -29,5 +29,6 @@
   "cartRemoveProductBtn": "Ürünü sepetten çıkar",
   "cartRemoveProductAndAddFavBtn": "Ürünü sepetten çıkarın ve favorilere ekleyin",
   "addressTitle": "Adreslerim",
-  "addressAddBtn": "Ekle"
+  "addressAddBtn": "Ekle",
+  "cartBuyProductNotification": "Ürün sepete eklendi"
 }

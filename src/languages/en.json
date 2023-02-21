@@ -29,5 +29,6 @@
   "cartRemoveProductBtn": "Remove from product cart",
   "cartRemoveProductAndAddFavBtn": "Remove product from cart and add to favorites",
   "addressTitle": "My address",
-  "addressAddBtn": "Add"
+  "addressAddBtn": "Add",
+  "cartBuyProductNotification": "Product cart added"
 }

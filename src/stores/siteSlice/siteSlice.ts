@@ -14,9 +14,13 @@ export const siteSlice = createSlice({
     changeStatus: (state, action: PayloadAction<boolean | null>) => {
       state.status = action.payload
     },
+    loadAddress: (state, action: PayloadAction<Address[]>) => {
+      state.address = action.payload
+      localStorage.setItem("address", JSON.stringify(state.address))
+    },
   },
 })
 
-export const { changeTheme, changeStatus } = siteSlice.actions
+export const { changeTheme, changeStatus, loadAddress } = siteSlice.actions
 export const siteSelector = (state: RootState) => state.site
 export default siteSlice.reducer

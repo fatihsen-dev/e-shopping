@@ -49,6 +49,80 @@
       background-color: var(--light);
       border: 1px solid var(--gray-border);
       padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gray);
+        padding: 20px;
+        border-radius: 5px;
+
+        & > span {
+          &:nth-of-type(3) {
+            font-size: 14px;
+            margin: 10px 0;
+          }
+          &:not(:first-of-type) {
+            font-weight: 200;
+          }
+        }
+        & > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+
+          & > span {
+            font-weight: 200;
+          }
+          & > button {
+            @include center;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            color: var(--main-red);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width < 1300px) {
+  .container {
+    .address {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+  }
+}
+@media (width < 1050px) {
+  .container {
+    .address {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+}
+@media (width < 800px) {
+  .container {
+    padding: 30px !important;
+    .address {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+@media (width < 580px) {
+  .container {
+    .address {
+      grid-template-columns: repeat(1, 1fr) !important;
     }
   }
 }

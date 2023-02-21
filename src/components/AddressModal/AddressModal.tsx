@@ -4,6 +4,9 @@ import { IoMdClose } from "react-icons/io"
 import { useTranslation } from "react-i18next"
 import { Form, Field, Formik } from "formik"
 import * as Yup from "yup"
+import { useAppDispatch, useAppSelector } from "../../stores/hook"
+import { loadAddress } from "../../stores/siteSlice/siteSlice"
+import { uid } from "uid"
 
 type AdressPropsType = {
   modalIsActive: boolean
@@ -12,6 +15,8 @@ type AdressPropsType = {
 
 export default function AddressModal({ modalIsActive, setModalIsActive }: AdressPropsType) {
   const { t } = useTranslation()
+  const dispatch = useAppDispatch()
+  const { address } = useAppSelector((state) => state.site)
 
   const initialValues = {
     name: "",
@@ -30,14 +35,19 @@ export default function AddressModal({ modalIsActive, setModalIsActive }: Adress
     address: Yup.string().required("Required"),
     phone: Yup.string()
       .required("Required")
+      .min(10, "Too Short!")
+      .max(40, "Too Long!")
       .matches(
         /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
         "Phone number is not valid"
       ),
   })
 
-  const submitHandle = (values: any) => {
-    console.log(values)
+  const submitHandle = (values: any, { resetForm }: any) => {
+    dispatch(loadAddress([...address, { ...values, id: uid() }]))
+
+    resetForm()
+    setModalIsActive(false)
   }
 
   return (

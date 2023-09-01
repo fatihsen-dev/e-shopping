@@ -3,4 +3,4 @@ const HTTP = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 })
 
-export const requestAllProducts = async () => await HTTP.post("/")
+export const requestAllProducts = async () => await HTTP.get("/products")

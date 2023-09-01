@@ -24,7 +24,7 @@
   "cartPageTotalPrice": "Total price:",
   "promotionCode": "Promotion Code",
   "removeFavItemMessage": "Product removed from favorite",
-  "addFavItemMessage": "Are you sure you want to remove the product from the cart?",
+  "addFavItemMessage": "Product added to favorites",
   "cartRemoveProductMessage": "Are you sure you want to remove the product from the cart?",
   "cartRemoveProductBtn": "Remove from product cart",
   "cartRemoveProductAndAddFavBtn": "Remove product from cart and add to favorites",
